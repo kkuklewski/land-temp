@@ -23,7 +23,7 @@ upload_dir: static/img
 public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false
-file_template: ":filename:"
+file_template: ':filename:,"year",'
 build:
   preview_output_directory: build
   install_dependencies_command: yarn install
