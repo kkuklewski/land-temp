@@ -8,32 +8,29 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    title: <>Easy to Use</>,
+    title: <>Za pomocą</>,
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        <code>Kamery</code> : HD, UHD, 4K / <code>PLus</code> : Aparaty foto, kompakty GoPro, Dron 249g, Dron kategorii A1/B1
       </>
     ),
   },
   {
-    title: <>Focus on What Matters</>,
+    title: <>Dodatkowo</>,
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Streaming online, <code>Spacer Wirtualny 360</code>, Mattepor | <code>Strony internetowe</code> : Wordpress, Sklepy internetowe, Elementor, <code>HTML/CSS/JS/React</code>, Przygotowanie materiału pod Social Media oraz Doradztwo Marketingowe
       </>
     ),
   },
   {
-    title: <>Powered by React</>,
+    title: <>Jak w Excelu ..</>,
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Wszystko jawne, daj znać jaki projekt chodzi Ci pogłowie dostaniesz różne możliwości cenowe na wykonanie tego zadanie z szczegółowym rozpisaniem pozycji.
       </>
     ),
   },
@@ -45,7 +42,7 @@ function Feature({imageUrl, title, description}) {
     <div className={classnames('col col--4', styles.feature)}>
       {imgUrl && (
         <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+          <img className={styles.featureImage} src={imgUrl} alt={title}/>
         </div>
       )}
       <h3>{title}</h3>
@@ -60,21 +57,13 @@ function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <header className={classnames('hero hero--primary', styles.heroBanner)}>
+      description="Description will go into a meta tag in <head/>">
+      {/*baner*/}
+      <header className="banner">
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
-            </Link>
-          </div>
+          <h1 className="hero__title">Załatwimy wszystko,</h1>
+          <p className="hero__subtitle">.. od czołgu po paszport polsatu.</p>
+
         </div>
       </header>
       <main>
@@ -90,7 +79,25 @@ function Home() {
           </section>
         )}
       </main>
+      <footer>
+        <section className="videoPlayer">
+          <h2 className="text-center">Showreel</h2>
+          <iframe className="embed-responsive-item videoPlayer" src="https://player.vimeo.com/video/435890018"
+                  allowFullScreen></iframe>
+          <div className={styles.buttons}>
+            <Link
+              className={classnames(
+                'button button--outline button--secondary button--lg',
+                styles.getStarted,
+              )}
+              to={useBaseUrl('docs/')}>
+              Kontakt
+            </Link>
+          </div>
+        </section>
+      </footer>
     </Layout>
+
   );
 }
 

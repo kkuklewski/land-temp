@@ -23,3 +23,10 @@
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
+.videoPlayer {
+  width: 100%;
+  height: 56.25vw;
+  margin: 0 auto;
+  border: none;
+}
