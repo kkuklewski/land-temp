@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import LatestPosts from "./LatestPosts";
 
 const features = [
   {
@@ -67,6 +68,7 @@ function Home() {
         </div>
       </header>
       <main>
+        <LatestPosts/>
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
