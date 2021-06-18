@@ -32,7 +32,8 @@ function LatestPosts() {
               const [_, raw_meta, raw_content = ''] = post.split("---")
               const meta = yaml.load(raw_meta);
               const content = raw_content.trim()
-              return {meta, content}
+              const blog_url = "/blog/" + name
+              return {meta, content, blog_url}
             }))
           })
         }
@@ -40,7 +41,18 @@ function LatestPosts() {
   }, []);
 
   return posts.map((post, index) => (
-    <span key={index} test={console.log(post)}>{post.meta.title}</span>
+          <div className="col content">
+            <div className="card shadow-sm">
+    <div className="card" key={index} test={console.log(post)}>
+        <img className="card-img-top" src=""></img>
+      <div className="card-body">
+      <h5 className="card-title">{post.meta.title}</h5>
+      <p className="card-text">{post.content}</p>
+      <a className="btn btn-primary" href={post.blog_url}>przycisk</a>
+      </div>
+    </div>
+      </div>
+    </div>
   ))
 }
 

@@ -6,6 +6,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
 import LatestPosts from "./LatestPosts";
+import { Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const features = [
   {
@@ -13,7 +15,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_mountain.svg',
     description: (
       <>
-        <code>Kamery</code> : HD, UHD, 4K / <code>PLus</code> : Aparaty foto, kompakty GoPro, Dron 249g, Dron kategorii A1/B1
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores cum laborum magnam quibusdam sequi?
       </>
     ),
   },
@@ -22,7 +24,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_tree.svg',
     description: (
       <>
-        Streaming online, <code>Spacer Wirtualny 360</code>, Mattepor | <code>Strony internetowe</code> : Wordpress, Sklepy internetowe, Elementor, <code>HTML/CSS/JS/React</code>, Przygotowanie materiału pod Social Media oraz Doradztwo Marketingowe
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid culpa distinctio ex expedita, impedit laboriosam nemo non reprehenderit tempora tenetur? Culpa deleniti distinctio dolore est.
       </>
     ),
   },
@@ -31,7 +33,7 @@ const features = [
     imageUrl: 'img/undraw_docusaurus_react.svg',
     description: (
       <>
-        Wszystko jawne, daj znać jaki projekt chodzi Ci pogłowie dostaniesz różne możliwości cenowe na wykonanie tego zadanie z szczegółowym rozpisaniem pozycji.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur assumenda consequatur cum dicta dolores doloribus est eveniet fuga labore molestias mollitia neque nulla.
       </>
     ),
   },
@@ -62,8 +64,8 @@ function Home() {
       {/*baner*/}
       <header className="banner">
         <div className="container">
-          <h1 className="hero__title">Załatwimy wszystko,</h1>
-          <p className="hero__subtitle">.. od czołgu po paszport polsatu.</p>
+          <h1 className="hero__title">Lorem ipsum dolor.,</h1>
+          <p className="hero__subtitle">.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, sint!</p>
 
         </div>
       </header>
@@ -71,32 +73,22 @@ function Home() {
         <LatestPosts/>
         {features && features.length > 0 && (
           <section className={styles.features}>
-            <div className="container">
-              <div className="row">
+            <div className="album py-5 bg-light">
+              <div className="container">
+                <div className="flex row">
                 {features.map((props, idx) => (
                   <Feature key={idx} {...props} />
                 ))}
               </div>
             </div>
+            </div>
           </section>
         )}
       </main>
+      <aside>
+        <Button color="danger">Danger!</Button>
+      </aside>
       <footer>
-        <section className="videoPlayer">
-          <h2 className="text-center">Showreel</h2>
-          <iframe className="embed-responsive-item videoPlayer" src="https://player.vimeo.com/video/435890018"
-                  allowFullScreen></iframe>
-          <div className={styles.buttons}>
-            <Link
-              className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Kontakt
-            </Link>
-          </div>
-        </section>
       </footer>
     </Layout>
 
