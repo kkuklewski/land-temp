@@ -10,5 +10,5 @@ author: Name Surname
 author_title: Author Title
 author_url: https://a1v.pl
 author_image_url: ''
-
+slug: lorem-ipsum
 ---
